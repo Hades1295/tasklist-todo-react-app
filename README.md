@@ -1,50 +1,59 @@
-<<<<<<< HEAD
-# tasklist-todo-react-app
-=======
-# Getting Started with Create React App
+**TODO List Application**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ A responsive and feature-rich TODO list web application built with React and TypeScript. The app enables users to manage tasks, search through them, and persist their data using localStorage for offline support.
 
-## Available Scripts
 
-In the project directory, you can run:
+**Features**
 
-### `npm start`
+<ul>Core Features<ul>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<i>Task Management:</i>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    Add tasks with a title and description.
+    Mark tasks as complete/incomplete.
+    Delete individual tasks.
+    Clear all tasks with a single button.
 
-### `npm test`
+<i>Search Functionality:</i>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    Dynamically filters tasks based on their title (case-insensitive).
 
-### `npm run build`
+<i>Offline Support:</i>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    Data is persisted using localStorage.
+    Tasks remain available even after page reloads.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Project Structure**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<i>1. App Component</i>
 
-### `npm run eject`
+        The main component responsible for:
+        Managing the tasks and search states.
+        Interacting with localStorage via utility functions.
+        Rendering child components:
+        Search bar.
+        TaskForm for adding new tasks.
+        TaskList to display and manage tasks.
+        Clear All Tasks button.
+        
+<i>2. Components</i>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    TaskForm.tsx:
+    A controlled form for adding new tasks with validation.
+    TaskList.tsx:
+    Displays a list of tasks with options to toggle completion or delete tasks.
+    TaskItem.tsx (Optional):
+    A reusable component for rendering individual tasks.
+    
+<i>3. Utilities</i>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    storage.ts:
+    getTasks: Fetches tasks from localStorage or returns an empty array.
+    saveTasks: Saves the tasks to localStorage.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+**Styling**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<i>Tailwind CSS:</i>
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
->>>>>>> e0fd664f126dcba07dabb237c39ca8300f303e77
+    Used for creating a clean, mobile-first, and responsive UI.
+    Styled components include buttons, inputs, and task lists.
